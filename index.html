@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Kauã Everton</title>
-    <link rel="icon" href="IMG/Kauã.png" type="image/x-icon"/>
+    <link rel="icon" href="IMG/Kauã.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <img class="logomarca" src="IMG/Kauã.png" alt="LOGOmarca de Kauã"><h1> Portfólio Desenvolvedor</h1>
+        <img class="logomarca" src="IMG/Kauã.png" alt="LOGOmarca de Kauã">
+        <h1> Portfólio Desenvolvedor</h1>
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre Mim</a></li>
@@ -23,62 +26,112 @@
     <section id="minha-pessoa" class="sobre">
         <div class="intro-text">
             <h1>Kauã Everton de Lira</h1>
-            <p>Desenvolvedor Full Stack</p>
+            <p> Full Stack em formação | JavaScript | Python | Web Development | SQL | APIs REST | Git & GitHub | Design
+                & Tecnologia</p>
         </div>
-        
-        <img src="IMG/Perfil.png" alt="Foto Kauã Everton de Lira">
+
+        <img src="IMG/Perfil.jpg" alt="Foto Kauã Everton de Lira">
     </section>
 
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Sou um desenvolvedor de sistemas full-stack com experiência em tecnologias e linguagens de programação. Desempenhado a entregar projetos muito bem desenvolvidos e eficientes.</p>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas no SENAI Manuel Garcia Filho, com foco em desenvolvimento
+            web e soluções digitais. Possui conhecimentos em JavaScript, Python, SQL, Git/GitHub, APIs REST e interfaces
+            web, além de interesse em design, automação e experiência do usuário. Busca constante evolução técnica por
+            meio de projetos práticos e desafios na área de tecnologia.</p>
     </section>
 
     <section id="projetos">
-        <h2>Projetos</h2>
-        <ul>
-            <li>
-                <h3>Projeto 1: Sistema Funcional Para Funcionários Bater ponto. (Moretti)</h3>
-                <p>Descrição: Um sistema web para gerenciar registros de funcionários e históricos de pontos</p>
-                <strong>Uso de: HTML, CSS, JS e Firebase</strong>
+    <h2>Projetos</h2>
+
+    <div class="projetos-grid">
+
+        <div class="projeto-card">
+            <img src="IMG/nexus.png" alt="Nexus IOT" class="projeto-img">
+            
+            <div class="projeto-info">
+                <h3>Nexus IOT</h3>
+                <p>Sistema voltado para gerenciamento industrial focado em otimização de processos.</p>
                 
-                <center>
-                    <a href="https://nicolasqs66.github.io/moretti-projeto/" target="_blank">
-                        <img src="IMG/Moretti_LOGONOVA-removebg-preview.png" alt="Foto Moretti">
-                    </a>
-                </center>
-            </li>
-            <li>
-                <h3>Projeto 2: Site Web Inspirado em Serviço de Streaming (BNS Max) </h3>
-                <p>Descrição: Um site web inspirado na HBO Max</p>
-                <strong>Uso de: HTML e CSS</strong>
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Firebase</span>
+                </div>
 
-                <center>
-                    <a href="https://nicolasquirino-senai.github.io/BNSMAX-SENAI/paginicial.html" target="_blank">
-                        <img src="IMG/BNSmaxSEMFUNDO.png" width="100px" alt="Foto BNXMAX" >
-                    </a>
-                </center>
-            </li>
-            <li>
-                <h3>Projeto 3: Site Web de Gerenciamento de Máquinas Industrial(Nexus IOT) </h3>
-                <p>Descrição: Sistema Voltado para Resolver Problemas das Indústrias</p>
-                <strong>Uso de: HTML, CSS, JS e FIREBASE</strong>
-
-                <center>
+                <div class="projeto-botoes">
                     <a href="https://kauaevertondelira.github.io/gerenciamento_industrial/" target="_blank">
-                        <img src="IMG/nexus.png" alt="Foto BNXMAX" >
+                        <i class="fa-solid fa-globe"></i> Ver Projeto
                     </a>
-                </center>
-            </li>
-        </ul>
-    </section>
+                    <a href="https://github.com/kauaevertondelira/gerenciamento_industrial" target="_blank">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto-card">
+            <img src="IMG/Moretti_LOGONOVA-removebg-preview.png" alt="Moretti" class="projeto-img">
+            
+            <div class="projeto-info">
+                <h3>Moretti</h3>
+                <p>Gerenciamento de Controle de Ponto de Funcionários.</p>
+                
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Firebase</span>
+                </div>
+
+                <div class="projeto-botoes">
+                    <a href="https://nicolasqs66.github.io/moretti-projeto/"target="_blank">
+                        <i class="fa-solid fa-globe"></i> Ver Projeto
+                    </a>
+                    <a href="https://github.com/nicolasqs66/moretti-projeto" target="_blank">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto-card">
+            <img id="nazcaimg" src="IMG/logo_nazca.png" alt="Gestão Nazca" class="projeto-img">
+            
+            <div class="projeto-info">
+                <h3>POPs Nazca</h3>
+                <p>Sistema de Gerenciamento de POPs (Procedimentos Operacionais Padronizados).</p>
+                
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>SpringBoot</span>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="projeto-botoes">
+                    <a href="https://kauaevertondelira.github.io/pops_nazca/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Ver Projeto
+                    </a>
+                    <a href="https://github.com/kauaevertondelira/pops_nazca" target="_blank">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</section>
 
     <section id="linguagens">
         <h2>Linguagens trabalhadas</h2>
         <h3>Algumas das linguagens conhecidas e utilizadas por mim em projetos recentes:</h3>
 
         <div class="tech-container">
-            
+
             <div class="tech-table">
                 <h3>Front-End</h3>
                 <div class="tech-icons">
@@ -134,12 +187,9 @@
     <center>
         <section id="contato">
             <h2>Contato</h2>
-            <p>Você pode entrar em contato comigo através do email: kauaevertondelira@gmail.com | ou pelas redes sociais abaixo</p><br>
+            <p>Você pode entrar em contato comigo através do email: kauaevertondelira@gmail.com | ou pelas redes sociais
+                abaixo</p><br>
             <div class="social-container">
-            
-                <a href="https://www.instagram.com/k.everton09/?next=%2F" target="_blank" class="btn-social insta">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
 
                 <a href="https://w.app/kauaevertondelira" target="_blank" class="btn-social whats">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -149,54 +199,21 @@
                     <i class="fa-brands fa-github"></i>
                 </a>
 
+                <a href="https://www.linkedin.com/in/kau%C3%A3-everton-de-lira-776b4637b/" target="_blank"
+                    class="btn-social linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
             </div>
         </section>
     </center>
-    
+
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="fullImage">
     </div>
 
-    <script>
-        // Pega os elementos do HTML
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("fullImage");
-        const span = document.getElementsByClassName("close")[0];
-        const track = document.querySelector('.slide-track');
-
-        // Pega todas as imagens dentro dos slides do carrossel
-        const images = document.querySelectorAll('.slide img');
-
-        // Para cada imagem do carrossel, adiciona um "ouvidor de cliques"
-        images.forEach(img => {
-            img.addEventListener('click', function() {
-                modal.style.display = "flex"; // Mostra o modal (usando flex para centralizar)
-                modal.style.alignItems = "center"; // Centraliza verticalmente
-                modal.style.justifyContent = "center"; // Centraliza horizontalmente
-                modalImg.src = this.src; // Pega o SRC da imagem clicada e põe no modal
-                
-                // Opcional: Pausa o carrossel enquanto o modal está aberto
-                track.style.animationPlayState = 'paused';
-            });
-        });
-
-        // Quando clicar no 'X' (span), fecha o modal
-        span.onclick = function() {
-            modal.style.display = "none";
-             // Opcional: Retoma o carrossel
-             track.style.animationPlayState = 'running';
-        }
-
-        // Se clicar fora da imagem (no fundo preto), também fecha
-        modal.onclick = function(event) {
-            // Certifica-se de que o clique foi exatamente no fundo do modal e não na imagem
-            if (event.target === modal) {
-                modal.style.display = "none";
-                // Opcional: Retoma o carrossel
-                track.style.animationPlayState = 'running';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -7,10 +7,14 @@
 }
 
 :root {
-    --primary-color: #3cb0f8; /* Azul bonito */
-    --dark-bg: #0f172a;       /* Fundo escuro */
-    --light-text: #f8fafc;    /* Texto claro */
-    --card-bg: #1e293b;       /* Fundo dos cartões */
+    --primary-color: #3cb0f8;
+    /* Azul bonito */
+    --dark-bg: #0f172a;
+    /* Fundo escuro */
+    --light-text: #f8fafc;
+    /* Texto claro */
+    --card-bg: #1e293b;
+    /* Fundo dos cartões */
 }
 
 body {
@@ -29,18 +33,20 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logomarca {
-    height: 50px; /* Limita o tamanho da logo */
+    height: 50px;
+    /* Limita o tamanho da logo */
     width: auto;
 }
 
 header h1 {
     font-size: 20px;
     margin-left: 10px;
-    flex-grow: 1; /* Empurra o menu para a direita */
+    flex-grow: 1;
+    /* Empurra o menu para a direita */
 }
 
 nav ul {
@@ -62,11 +68,16 @@ nav a:hover {
 
 /* --- SEÇÃO PRINCIPAL (ONDE ESTÁ A FOTO) --- */
 #minha-pessoa {
-    min-height: 50vh; /* Ocupa quase a tela toda */
-    display: flex; /* Mágica do Flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 3rem; /* Espaço entre texto e foto */
+    min-height: 50vh;
+    /* Ocupa quase a tela toda */
+    display: flex;
+    /* Mágica do Flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    gap: 3rem;
+    /* Espaço entre texto e foto */
     padding: 0 10%;
     background: linear-gradient(to bottom, #0f172a, #1e293b);
 }
@@ -91,17 +102,23 @@ nav a:hover {
 
 /* ESTILIZAÇÃO DA FOTO DO PERFIL */
 #minha-pessoa img {
-    width: 300px;      /* Tamanho fixo */
-    height: 300px;     /* Tamanho fixo */
-    object-fit: cover; /* Garante que a foto não estique/deforme */
-    border-radius: 50%; /* Deixa redonda (use 20px para quadrada com bordas suaves) */
+    width: 300px;
+    /* Tamanho fixo */
+    height: 300px;
+    /* Tamanho fixo */
+    object-fit: cover;
+    /* Garante que a foto não estique/deforme */
+    border-radius: 50%;
+    /* Deixa redonda (use 20px para quadrada com bordas suaves) */
     border: 4px solid var(--primary-color);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5); /* Efeito de brilho */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+    /* Efeito de brilho */
     transition: transform 0.3s ease;
 }
 
 #minha-pessoa img:hover {
-    transform: scale(1.05); /* Zoom leve ao passar o mouse */
+    transform: scale(1.05);
+    /* Zoom leve ao passar o mouse */
 }
 
 /* --- Outras Seções --- */
@@ -128,13 +145,14 @@ h2 {
     background-color: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
     #minha-pessoa {
-        flex-direction: column-reverse; /* Foto vai para cima, texto para baixo */
+        flex-direction: column-reverse;
+        /* Foto vai para cima, texto para baixo */
         text-align: center;
         padding-top: 100px;
     }
@@ -143,31 +161,37 @@ h2 {
         width: 200px;
         height: 200px;
     }
-    
+
     header {
         flex-direction: column;
         gap: 1rem;
     }
 }
-#projetos img{
+
+#projetos img {
     width: 350px;
     height: 300px;
-    
+
 }
+
 /* --- Carrossel Infinito --- */
 #certificados {
     text-align: center;
-    overflow: hidden; /* Esconde o que sai da tela */
+    overflow: hidden;
+    /* Esconde o que sai da tela */
     padding: 50px 0;
-    background-color: var(--card-bg); /* Usa a cor definida no passo anterior */
+    background-color: var(--card-bg);
+    /* Usa a cor definida no passo anterior */
 }
 
 /* O container principal */
 .slider {
     margin: auto;
     position: relative;
-    width: 90%; /* Largura do carrossel na tela */
-    height: 250px; /* Altura máxima das imagens */
+    width: 90%;
+    /* Largura do carrossel na tela */
+    height: 250px;
+    /* Altura máxima das imagens */
     overflow: hidden;
 }
 
@@ -178,37 +202,51 @@ h2 {
        6 slides originais + 6 duplicatas = 12 slides. 
        Largura total = (Largura do slide * Número total de slides) 
     */
-    width: calc(300px * 12); 
-    animation: scroll 20s linear infinite; /* A mágica acontece aqui */
+    width: calc(300px * 12);
+    animation: scroll 20s linear infinite;
+    /* A mágica acontece aqui */
 }
 
 /* 🛑 ANIMAÇÃO DO CARROSSEL ADICIONADA/CORRIGIDA */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-300px * 6)); } /* Rola o tamanho de 6 slides */
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-300px * 6));
+    }
+
+    /* Rola o tamanho de 6 slides */
 }
+
 /* 🛑 FIM DA CORREÇÃO DA ANIMAÇÃO */
 
 
 .slide {
     height: 200px;
-    width: 300px; /* Largura fixa para cada slide */
+    width: 300px;
+    /* Largura fixa para cada slide */
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza a imagem no slide */
+    justify-content: center;
+    /* Centraliza a imagem no slide */
     padding: 15px;
 }
 
 .slide img {
-    width: 100%; /* Imagem ocupa o slide todo */
+    width: 100%;
+    /* Imagem ocupa o slide todo */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra bonita */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra bonita */
     transition: transform 0.3s;
 }
 
 .slide img:hover {
-    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta um pouco ao passar o mouse */
     cursor: pointer;
 }
 
@@ -216,6 +254,7 @@ h2 {
 .slider:hover .slide-track {
     animation-play-state: paused;
 }
+
 /* --- ESTILOS DO MODAL (LIGHTBOX) --- */
 
 /* Garante que o cursor mostre que é clicável no carrossel */
@@ -225,16 +264,22 @@ h2 {
 
 /* O fundo do Modal (fica escondido por padrão) */
 .modal {
-    display: none; /* Escondido inicialmente */
-    position: fixed; /* Fica fixo na tela mesmo se rolar */
-    z-index: 9999; /* Fica em cima de TUDO */
+    display: none;
+    /* Escondido inicialmente */
+    position: fixed;
+    /* Fica fixo na tela mesmo se rolar */
+    z-index: 9999;
+    /* Fica em cima de TUDO */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Permite rolar se a imagem for muito alta */
-    background-color: rgba(0,0,0,0.9); /* Fundo preto 90% transparente */
-    backdrop-filter: blur(5px); /* Efeito de desfoque chique no fundo */
+    overflow: auto;
+    /* Permite rolar se a imagem for muito alta */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo preto 90% transparente */
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque chique no fundo */
 }
 
 /* A imagem dentro do modal */
@@ -242,12 +287,16 @@ h2 {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 900px; /* Limita a largura máxima */
-    max-height: 85vh; /* Limita a altura para caber na tela */
-    object-fit: contain; /* Garante que a imagem inteira apareça sem cortar */
+    max-width: 900px;
+    /* Limita a largura máxima */
+    max-height: 85vh;
+    /* Limita a altura para caber na tela */
+    object-fit: contain;
+    /* Garante que a imagem inteira apareça sem cortar */
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-    animation: zoom 0.3s; /* Animação de entrada */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: zoom 0.3s;
+    /* Animação de entrada */
 }
 
 /* O botão de fechar (X) */
@@ -271,12 +320,17 @@ h2 {
 
 /* Animação de zoom simples ao abrir */
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* Responsividade para telas pequenas */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
     .modal-content {
         width: 95%;
     }
@@ -284,111 +338,241 @@ h2 {
 
 
 footer {
-             text-align: center;
-             padding: 40px 20px;
-             background-color: #1a252f; /* Fundo escuro */
-             color: #ccc;
-             border-top: 5px solid #2c3e50;
-         }
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a252f;
+    /* Fundo escuro */
+    color: #ccc;
+    border-top: 5px solid #2c3e50;
+}
 
-         .social-container {
-             display: flex;
-             justify-content: center;
-             gap: 20px; /* Espaço entre os botões */
-             margin-bottom: 20px;
-         }
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espaço entre os botões */
+    margin-bottom: 20px;
+}
 
-         .btn-social {
-             width: 50px;       /* Largura do círculo */
-             height: 50px;      /* Altura do círculo */
-             border-radius: 50%; /* Faz ficar redondo */
-             background-color: #333;
-             display: flex;
-             justify-content: center; /* Centraliza o ícone horizontalmente */
-             align-items: center;     /* Centraliza o ícone verticalmente */
-             text-decoration: none;
-             color: white;
-             font-size: 24px;   /* Tamanho do ícone */
-             transition: all 0.3s ease; /* Animação suave */
-         }
+.btn-social {
+    width: 50px;
+    /* Largura do círculo */
+    height: 50px;
+    /* Altura do círculo */
+    border-radius: 50%;
+    /* Faz ficar redondo */
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    /* Centraliza o ícone horizontalmente */
+    align-items: center;
+    /* Centraliza o ícone verticalmente */
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    /* Tamanho do ícone */
+    transition: all 0.3s ease;
+    /* Animação suave */
+}
 
-         /* Cores específicas ao passar o mouse */
-         .btn-social.insta:hover {
-             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-             transform: translateY(-5px); /* Pulo para cima */
-             box-shadow: 0 5px 15px rgba(214, 36, 159, 0.4);
-         }
+/* Cores específicas ao passar o mouse */
 
-         .btn-social.whats:hover {
-             background-color: #25D366;
-             transform: translateY(-5px);
-             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-         }
 
-         .btn-social.git:hover {
-             background-color: #ffffff;
-             color: #333; /* Ícone fica preto no fundo branco */
-             transform: translateY(-5px);
-             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-         }
+.btn-social.whats:hover {
+    background-color: #25D366;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
 
-         footer p {
-             font-size: 0.9rem;
-             opacity: 0.7;
-         }
-         /* Seção geral */
+.btn-social.git:hover {
+    background-color: #ffffff;
+    color: #333;
+    /* Ícone fica preto no fundo branco */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-social.linkedin:hover {
+    background-color: #0A66C2;
+    /* Azul oficial do LinkedIn */
+    color: #ffffff;
+    /* Ícone branco */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(10, 102, 194, 0.4);
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Seção geral */
 #linguagens {
-  text-align: center;
-  padding: 40px 20px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 /* Container que segura as 3 tabelas */
-        .tech-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap; /* Permite quebrar linha no celular */
-            margin-top: 30px;
-            padding: 0 20px;
-        }
+.tech-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Permite quebrar linha no celular */
+    margin-top: 30px;
+    padding: 0 20px;
+}
 
-        /* O visual de cada "tabela" individual */
-        .tech-table {
-            background-color: linear-gradient(to bottom, #0f172a, #1e293b); /* Fundo branco ou ajuste conforme seu tema */
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            width: 250px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+/* O visual de cada "tabela" individual */
+.tech-table {
+    background-color: linear-gradient(to bottom, #0f172a, #1e293b);
+    /* Fundo branco ou ajuste conforme seu tema */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
-        .tech-table:hover {
-            transform: translateY(-5px); /* Efeito ao passar o mouse */
-        }
+.tech-table:hover {
+    transform: translateY(-5px);
+    /* Efeito ao passar o mouse */
+}
 
-        .tech-table h3 {
-            color: #ffffff;
-            border-bottom: 2px solid #007bff; /* Cor de destaque */
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
+.tech-table h3 {
+    color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    /* Cor de destaque */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
 
-        /* Container dos ícones dentro da tabela */
-        .tech-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+/* Container dos ícones dentro da tabela */
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-        /* Tamanho padrão dos ícones */
-        .tech-icons img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            cursor: pointer;
-        }
+/* Tamanho padrão dos ícones */
+.tech-icons img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* --- GRID DOS PROJETOS --- */
+.projetos-grid {
+    display: grid;
+    /* Criamos colunas fixas de 320px que se ajustam conforme o espaço da tela */
+    grid-template-columns: repeat(auto-fit, 320px); 
+    gap: 30px;
+    margin-top: 30px;
+    /* Isso aqui mata o espaço vazio à direita e centraliza o bloco todo */
+    justify-content: center; 
+}
+
+/* --- ESTILO DO CARD --- */
+.projeto-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* AS DUAS LINHAS ABAIXO SÃO A MÁGICA: */
+    max-width: 400px; /* Impede que o card fique mais largo que 400px */
+    margin: 0 auto; /* Centraliza o card na própria coluna dele */
+    width: 100%;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px); /* Card "levanta" ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+#nazcaimg.projeto-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a imagem preencher o espaço certinho sem achatar */
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.projeto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Mágica: empurra os botões sempre para a base do card */
+}
+
+.projeto-info h3 {
+    color: var(--light-text);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.projeto-info p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Preenche o espaço vazio se o texto for curto */
+}
+
+/* --- TAGS DE LINGUAGENS --- */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tags span {
+    background-color: #0f172a;
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid var(--primary-color);
+}
+
+/* --- BOTÕES DOS LINKS --- */
+.projeto-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.projeto-botoes a {
+    flex: 1; /* Cada botão ocupa metade do espaço */
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.projeto-botoes a:hover {
+    background: #2563eb; /* Azul mais forte no hover */
+    transform: scale(1.02);
+}
