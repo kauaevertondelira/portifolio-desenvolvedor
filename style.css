@@ -378,12 +378,6 @@ footer {
 /* Cores específicas ao passar o mouse */
 
 
-.btn-social.whats:hover {
-    background-color: #25D366;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-}
-
 .btn-social.git:hover {
     background-color: #ffffff;
     color: #333;
