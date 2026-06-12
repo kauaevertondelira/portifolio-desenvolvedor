@@ -499,6 +499,12 @@ footer p {
     object-fit: cover;
 }
 
+#nexusimg.projeto-img{
+    width: 320px;
+    height: 300px;
+    object-fit: cover;
+}
+
 .projeto-img {
     width: 100%;
     height: 200px;
